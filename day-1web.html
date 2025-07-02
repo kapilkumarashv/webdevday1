@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Incredible India Blog</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #004e9b;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 30px;
+      align-items: center;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      display: none;
+      padding: 20px;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px;
+      background-color: #e0f7fa;
+    }
+
+    .hero img {
+      max-width: 100%;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .about, .video-section {
+      padding: 30px;
+      background-color: white;
+      margin: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .video-section iframe {
+      border-radius: 10px;
+      max-width: 100%;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .blog-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .wide {
+      grid-column: span 2;
+      background-color: #f0faff;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Incredible India Blog</div>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('blog')">Destinations</a></li>
+    </ul>
+  </nav>
+  <div id="home" class="section active">
+    <section class="hero">
+      <h1>Namaste! Explore Incredible India</h1>
+      <p>From the Himalayas to the Indian Ocean, explore India’s most enchanting travel destinations and cultural gems.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/India_Gate_in_New_Delhi_03-2016_img3.jpg/1024px-India_Gate_in_New_Delhi_03-2016_img3.jpg" alt="India Gate">
+    </section>
+
+    <section class="about">
+      <h2>About This Blog</h2>
+      <p>Welcome to Incredible India Blog, your virtual guide to one of the most diverse countries on Earth. Discover history, nature, adventure, and food — all through our stories and snapshots.</p>
+    </section>
+
+    <section class="video-section">
+      <h2>Watch: Visit India</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/l4C32-yDdMU" title="Incredible India Video" allowfullscreen></iframe>
+    </section>
+  </div>
+  <div id="blog" class="section">
+    <main class="grid-container">
+      <div class="blog-card wide">
+        <h2>The Timeless Taj Mahal, Agra</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg" alt="Taj Mahal">
+        <p>One of the Seven Wonders of the World, the Taj Mahal is a symbol of eternal love. Its white marble beauty is breathtaking at sunrise and sunset.</p>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://media.istockphoto.com/id/1266651692/photo/houseboat-in-alappuzha-backwaters-kerala.jpg?s=612x612&w=0&k=20&c=G432lmdUz9qrW6D4sZYxLe6K-Km85OEmZg0qpcGyRCI=" alt="Kerala Backwaters">
+        <h3>Kerala: God's Own Country</h3>
+        <p>Enjoy serene houseboat rides, lush greenery, Ayurvedic treatments, and cultural festivals in the beautiful backwaters of Kerala.</p>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHyK0sIutDGkEzbG39BOxxeX7FCm2DvLPhyg&s" alt="Ladakh">
+        <h3>Adventure in Ladakh</h3>
+        <p>High-altitude deserts, Buddhist monasteries, and snow-capped peaks — Ladakh is India’s ultimate destination for thrill-seekers.</p>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtn194wcPgcbLeZo_CK1B64p-mkKmtlu0P3Q&s" alt="Jaipur Palace">
+        <h3>Royal Jaipur</h3>
+        <p>The Pink City is a blend of royal heritage, colorful bazaars, and iconic forts like Amer Fort and the Hawa Mahal.</p>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80OI2iss8-LO6-ECumgmiR04xH6Q8RN-mNw&s" alt="Rishikesh">
+        <h3>Spiritual Rishikesh</h3>
+        <p>Yoga capital of the world, nestled in the Himalayas by the Ganges. Visit for meditation, rafting, and peace of mind.</p>
+      </div>
+    </main>
+  </div>
+  <footer class="footer">
+    &copy; 2025 Incredible India Blog
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
